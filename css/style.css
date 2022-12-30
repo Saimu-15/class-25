@@ -1,0 +1,465 @@
+/*
+Template Name: Aytor
+Version: 1.0.0
+Author Name: Aytor
+
+
+Table of Content
+===========================
+   ********Home Page*********
+   1) Navigation Section
+   2) Banner Section
+*/
+
+/* common css start */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,a,button{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol,small,small,span{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+/* common css end */
+
+/*preloader Section Css Start */
+#preloader{
+    inset: 0;
+    position: fixed;
+    background: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999999;
+}
+/*preloader Section Css end */
+
+/* nav section css start */
+#nav.active{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    z-index: 999;
+    animation-name: menuFixed;
+    animation-duration: 2s;
+}
+@keyframes menuFixed {
+    from{
+        top: -100px;
+    }
+    to{
+        top: 0;
+    }
+}
+#nav ul li a{
+    color:  #11161E;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 32px 20px;
+}
+#nav ul li:hover a{
+    color: #FF6F61;
+}
+#nav ul li ul li a{
+    padding: 10px;
+}
+#nav .navbar_icon ul li button{
+    margin: 0 5px;
+    position: relative;
+    background: none;
+    border: none;
+}
+#nav .navbar_icon ul li:hover button{
+    color: #FF6F61;
+}
+#nav .navbar_icon{
+    position: relative;
+}
+#nav .navbar_icon #searchBar{
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    z-index: 99;
+    display: none;
+}
+#nav .navbar_icon ul li button span{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: red;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 50%;
+    line-height: 17px;
+    text-align: center;
+    top: -7px;
+    right: -8px;
+}
+/* nav section css end */
+
+/* banner section css start */
+#banner .banner_slider_dots{
+    position: absolute;
+    left: 8%;
+    bottom: 200px;
+}
+#banner .banner_slider_dots li{
+    line-height: 0;
+    display: inline-block;
+}
+#banner .banner_slider_dots li button{
+    border: none;
+    font-size: 0;
+    line-height: 0;
+    width: 10px;
+    height: 6px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background: #FFFFFF;
+    transition: .4s;
+}
+#banner .banner_slider_dots li.slick-active button{
+    width: 26px;
+    background-color: #FF6F61;
+}
+#banner .banner_slider_item{
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+#banner .banner_slider_item::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, rgba(2,5,19,.7),rgba(2,4,17,.6),rgba(1,4,15,.5),rgba(1,3,13,.48),rgba(0,0,0,.0));
+    z-index: -1;
+}
+#banner .banner_slider_item h4{
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+#banner .banner_slider_item h1{
+    font-weight: 700;
+    font-size: 50px;
+    color: #FFFFFF;
+    padding: 10px 0;
+}
+#banner .banner_slider_item p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+    padding-bottom: 15px;
+}
+#banner .banner_slider_item a{
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #FF6F61;
+    padding: 15px 40px;
+    display: inline-block;
+}
+/* banner section css end */
+
+/* Beauty Section Css start */
+#Beauty{
+    padding: 100px 0;
+}
+#Beauty .Beauty_item .Beauty_item_info{
+    position: relative;
+}
+#Beauty .overlay{
+    position: absolute;
+    inset: 30px;
+    background: rgba(17, 22, 30, 0.5);
+    transform: scale(0);
+    transition: 0.5s;
+}
+#Beauty .Beauty_item .Beauty_item_info:hover .overlay {
+    transform: scale(1);
+    color: #FFFFFF;
+}
+#Beauty .overlay h3{
+    color: var(--common-color);
+    font-family: var(--body-text);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+#Beauty .overlay a{
+    color: var(--common-color);
+    display: block;
+    text-align: center;
+    Font-style: 600;
+    Font-size: 16px;
+    Line-height: 28px;
+ 
+}
+#Beauty .Beauty_item .space{
+    margin-bottom: 26px;
+    
+}
+/* Beauty section css end */
+
+/* recent section css start */
+#recent{
+    padding-bottom: 100px;
+}
+#recent .heading h2{
+   font-size: 36px;
+   font-weight: 700;
+   color: #11161E;
+   text-align: center;
+   padding-bottom: 30px;
+}
+#recent .recent_product_item .product_info p{
+    font-size: 16px;
+    color: #444444;
+    padding: 20px;
+}
+#recent .recent_product_item .product_info h3{
+    font-weight: 600;
+    font-size: 18px;
+    color: #11161E;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+}
+#recent .recent_product_item .product_info i{
+    color: #FF6F61;
+    padding-bottom: 15px;
+}
+#recent .recent_product_slider_icon{
+    width: 30px;
+    height: 50px;
+    background: #adb4bb;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+#recent .recent_product_slider_icon.fa-chevron-left{
+    left: 16px;
+}
+#recent .recent_product_slider_icon.fa-chevron-right{
+    right: 16px;
+}
+#recent .recent_product_item{
+    position: relative;
+}
+#recent .recent_product_item .product_badge{
+    background: #FF6F61;
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 36px;
+    padding: 5px 20px;
+    transform: rotate(-90deg);
+    border-radius: 20px 0 0 20px;
+}
+#recent .recent_product_item .product_icon{
+    position: absolute;
+    top: 44px;
+    right: 33px;
+    visibility: hidden;
+}
+#recent .recent_product_item:hover .product_icon{
+    visibility: visible;
+}
+#recent .recent_product_item .product_icon ul li button{
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #ffffff;
+    color: #151A32;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 10px 0px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+#recent .recent_product_item .product_icon ul li button:hover{
+    background: #FF6F61;
+    color: #FFFFFF;
+}
+#recent .recent_product_item .product_icon ul li{
+    position: relative;
+}
+#recent .recent_product_item .product_icon ul li p.product_icon_badge{
+    position: absolute;
+    background: #151A32;
+    color: #FFFFFF;
+    top: 0;
+    right: 100%;
+    z-index: 99;
+    min-width: 90px;
+}
+/* recent section css end */
+
+/* details Section Css end */
+#details{
+    background: url(../img/details_img.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#details_info{
+    padding: 100px 0;
+    color: #FFFFFF;
+}
+#details_info h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+#details_info p{
+    font-size: 16px;
+    font-family: var(--body-font-two);
+    padding: 40px 0;
+}
+#details_info a{
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid #FFFFFF;
+    padding: 20px 30px;
+    color: #FFFFFF;
+}
+/* details Section Css end */
+
+/* Seller_Products Section Css end */
+#Seller_Products{
+    padding: 100px 0;
+    background: #E5E5E5;
+}
+#Seller_Products .heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: #11161E;
+    text-align: center;
+    padding-bottom: 35px;
+}
+#Seller_Products .recent_product_item .product_info p{
+    font-size: 16px;
+    color: #444444;
+    padding: 20px;
+}
+#Seller_Products .recent_product_item .product_info h3{
+    font-weight: 600;
+    font-size: 18px;
+    color: #11161E;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+}
+#Seller_Products .recent_product_item .product_info i{
+    color: #FF6F61;
+    padding-bottom: 30px;
+}
+#Seller_Products .recent_product_item{
+    position: relative;
+}
+#Seller_Products .recent_product_item .product_badge{
+    background: #FF6F61;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 36px;
+    padding: 10px 18px;
+    transform: rotate(-90deg);
+    border-radius: 20px 0 0 20px;
+    font-size: 16px;
+}
+#Seller_Products .recent_product_item .product_icon ul li button{
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #151A32;
+    margin-top: 10px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.08);
+    display: block;
+    transition: .4s;
+}
+#Seller_Products .recent_product_item .product_icon ul li button:hover{
+    background: #FF6F61;
+    color: #FFFFFF;
+}
+#Seller_Products .recent_product_item .product_icon{
+    position: absolute;
+    top: 44px;
+    right: 32px;
+    visibility: hidden;
+}
+#Seller_Products .recent_product_item:hover .product_icon{
+    visibility: visible;
+}
+#product_button{
+    margin-top: 40px;
+}
+#product_button a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    background: #FF6F61;
+    padding: 21px 34px;
+}
+/* Seller_Products Section Css end */
+
+/* deals section css start */
+#deals .heading h3{
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: #11161E;
+    line-height: 46px;
+    padding-top: 34px;
+}
+#deals .deals_countdown{
+    box-shadow: 0px 0px 10px 0px rgba(21, 26, 50, 0.1);
+    border-radius: 40px;
+    padding: 5px 20px;
+}
+#deals .deals_countdown .separator{
+    color: #FF6F61;
+    font-size: 50px;
+}
+#deals .deals_countdown_item span{
+    display: block;
+}
+#deals .deals_countdown_item span:first-child{
+    font-weight: 700;
+    font-size: 24px;
+}
+#deals .deals_countdown_item span:last-child{
+    font-size: 16px;
+}
+/* deals section css end */
+
+/* back to top section css start */
+#backtotop{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background: #FF6F61;
+    color: #FFFFFF;
+    display: none;
+    z-index: 99999;
+}
+/* back to top section css end */
